@@ -3,7 +3,7 @@ import subprocess
 import time
 import sys
 from colorama import Fore, Back
-#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
+
 
 def install():
     clear_term()
