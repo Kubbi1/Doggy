@@ -29,8 +29,6 @@ def bomberr():
 
 def clear_term():
     clear = subprocess.run("clear", shell = True)
-def phish():
-    use = subprocess.run('cd blackeye&&./blackeye.sh')
 
 def main():
     clear_term()
@@ -48,7 +46,7 @@ def main():
           Fore.LIGHTYELLOW_EX + "[0] - install the necessary packages\n"
                                 "[1] - bomber(SMS & Email)\n"
                                 "[2] - keylogger maker\n"
-                                "[3] - phishing\n" + Fore.RED +
+                                "[3] - ---\n" + Fore.RED +
                                 "[99] - exit\n")
     try:
         x = input(Fore.GREEN + '>')
