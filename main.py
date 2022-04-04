@@ -11,7 +11,7 @@ def install():
     bomber = subprocess.run('git clone https://github.com/TheSpeedX/TBomb&&pip install requests', shell = True)
     stealer = subprocess.run('git clone https://github.com/tiagorlampert/sAINT.git', shell = True)
     stealer2 = subprocess.run('sudo apt install maven&&sudo --fix-broken install&&sudo apt install zlib1g-dev libncurses5-dev lib32z1 lib32ncurses6 -y', shell = True)
-    phish = subprocess.run('git clone https://github.com/An0nUD4Y/blackeye', shell= True)
+    phish = subprocess.run('git clone https://github.com/KasRoudra/PyPhisher', shell= True)
     clear_term()
     print('Done!')
     time.sleep(4)
@@ -21,10 +21,11 @@ def install():
 def stealer():
     run = subprocess.run('cd sAINT&&sudo chmod +x configure.sh&&./configure.sh&&sudo java -jar sAINT.jar',
                          shell = True)
-
+def phish():
+    run = subprocess.run('cd PyPhisher&&python pyphisher.py', shell = True)
 
 def bomberr():
-    use = subprocess.run("cd TBomb&&python3 bomber.py ", shell = True)  # ,stdout=subprocess.DEVNULL)
+    run = subprocess.run("cd TBomb&&python3 bomber.py ", shell = True)  # ,stdout=subprocess.DEVNULL)
 
 
 def clear_term():
@@ -46,7 +47,7 @@ def main():
           Fore.LIGHTYELLOW_EX + "[0] - install the necessary packages\n"
                                 "[1] - bomber(SMS & Email)\n"
                                 "[2] - keylogger maker\n"
-                                "[3] - ---\n" + Fore.RED +
+                                "[3] - phishing\n" + Fore.RED +
                                 "[99] - exit\n")
     try:
         x = input(Fore.GREEN + '>')
@@ -59,7 +60,7 @@ def main():
             time.sleep(2)
             main()
         elif x == 3:
-            clear_term()
+            phish()
             main()
         elif x == 0:
             install()
@@ -69,6 +70,5 @@ def main():
             sys.exit(1)
     except:
         main()
-
 
 main()
